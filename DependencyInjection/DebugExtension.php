@@ -42,7 +42,7 @@ class DebugExtension extends Extension
             ->addMethodCall('setMaxString', array($config['max_string_length']));
 
         $container->getDefinition('var_dumper.html_dumper')
-            ->addMethodCall('setTheme', array($config['html_dumper_theme']));
+            ->addMethodCall('setTheme', array($config['theme']));
 
         if (null === $config['dump_destination']) {
             $container->getDefinition('var_dumper.command.server_dump')
